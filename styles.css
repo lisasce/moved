@@ -5,7 +5,7 @@ html, body {
   overflow-x: hidden;
 }
 
-span .content {
+.content {
   position: relative;
   height: 100vh;
 }
@@ -51,6 +51,9 @@ span .content {
   top: 5%;
   left: 25%;
   animation: move-left 12s infinite linear;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 #balloon2 {
@@ -63,8 +66,40 @@ span .content {
 p {
   text-align: center;
   font-weight: bold;
-  color: whitesmoke;
-  background-color: black;
+  color: #4C2F14;
+  background-image: linear-gradient(to bottom, rgba(176, 171, 172, 0.5), rgba(175, 158, 149, 0.5)), url("assets/oldpaper.jpg");
+  width: 40%;
+  height: fit-content;
+  padding: 1%;
+  border-radius: 5px;
+}
+
+.hanging {
+  border: 1px solid #4C2F14;
+  margin-top: 11px;
+}
+
+.hanging:last-child {
+  position: relative;
+}
+
+.hanging:last-child::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  right: 76px;
+  bottom: 0;
+  width: 16vw;
+  border-top: 3px double #4C2F14;
+  z-index: -1;
+}
+
+.fire {
+  margin: auto;
+  -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 @keyframes move-left {
